@@ -1,0 +1,36 @@
+/* > só seleciona os parágrafos filhos de header */
+header > p{
+    background-color: aqua;
+}
+
+/* + seleciona o primeiro parágrafo que está fora e vem logo depois do id: head */
+#head + p{
+    background-color: rgb(255, 0, 0);
+}
+
+/* ~ seleciona todos os parágrafos que estão fora e depois da div. */
+div ~ p{
+    background-color: rgb(194, 111, 111);
+}
+
+/* seleciona todos os elementos com width=50 */
+[width='50']{
+    background-color: rgb(112, 109, 109);
+}
+
+/* seleciona todos os elementos cujo 'title' termine com "0", no caso seria, title = "termina em 0" */
+[title$="0"]{
+    background-color: rgb(195, 0, 255);
+}
+/* seleciona todos os elementos cujo 'title' tenha a palavra "title", no caso seria, title = "title 1" */
+[title~="title"]{
+    background-color: blue;
+}
+/* seleciona todos os elementos cujo 'title' começa com a palavra "titu", no caso seria, title = "titulo" */
+[title^="titu"]{
+    background-color: rgb(0, 255, 34);
+}
+/* seleciona todos os elementos cujo 'title' tenha qualquer palavra com "b", no caso seria, title = "bola" */
+[title*="b"]{
+    background-color: rgb(83, 161, 93);
+}
