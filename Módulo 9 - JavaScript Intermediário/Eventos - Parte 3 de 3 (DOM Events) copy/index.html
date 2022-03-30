@@ -13,7 +13,8 @@
             let t = document.getElementById("titulo")
             
             // t.onclick = mudarText
-            
+            // t.onmouseout = mouseout
+            // t.onmouseover = mouseover
             t.addEventListener("click", mudarText)
             t.addEventListener("mouseover", mouseover)
             t.addEventListener("mouseout", mouseout)
@@ -25,7 +26,7 @@
             this.innerHTML = "Mouse saiu"
         }
         function mouseover() {
-            this.innerHTML = "Mouse sobre o texto"
+            this.innerHTML = "Mouse sobre"
         }
     </script>
 </head>

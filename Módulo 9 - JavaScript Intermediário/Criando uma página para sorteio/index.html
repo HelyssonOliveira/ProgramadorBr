@@ -20,13 +20,13 @@
         function sortear(){
             let numeroDePessoas = pessoas.length 
             let numeroSorteado = Math.floor(Math.random() * numeroDePessoas)
-            document.getElementById("d").innerHTML = pessoas[numeroSorteado]
+            document.getElementById("ps").innerHTML = pessoas[numeroSorteado]
         }
     </script>
 </head>
 
 <body>
-    <h1 id="d"></h1>
+    <h1 id="ps"></h1>
     <button onclick="sortear()">Sortear</button>
 </body>
 
