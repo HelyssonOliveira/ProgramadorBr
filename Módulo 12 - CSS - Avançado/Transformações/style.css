@@ -1,0 +1,16 @@
+img{
+    margin: 100px;
+    width: 200px;
+}
+#img1{
+    transform: rotate(48Deg);
+}
+#img2{
+    transform: scale(2, 1);
+}
+#img2{
+    transform: skew(48Deg);
+}
+#img3{
+    transform: skew(30deg, 30deg) scale(0.7, 1);
+}

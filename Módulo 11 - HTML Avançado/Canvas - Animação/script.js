@@ -8,15 +8,18 @@ let circle = {
     raio: 100,
     inicio: 0,
     fim: 0,
-    antiHor: false
+    // fim: 2 * Math.PI,
+    antiHor: true
 }
 
 function drawCircle(c) {
+    // RETANGULO DE FUNDO
     ctx.beginPath()
     ctx.rect(0, 0, 500, 500)
     ctx.fillStyle = "beige"
     ctx.fill()
 
+    // CÍRCULO
     ctx.beginPath()
     ctx.strokeStyle = "red"
     ctx.fillStyle = "blue"
@@ -31,5 +34,14 @@ setInterval(
             circle.x += 7
         }
         drawCircle(circle)
-    },
-    70)
+    }, 70)
+
+// setInterval(
+//     function () {
+//         if (circle.x < 580) {
+//             circle.x += 20
+//         }else{
+//             circle.x = -110
+//         }
+//         drawCircle(circle)
+//     }, 100)
