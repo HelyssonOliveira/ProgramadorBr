@@ -50,8 +50,7 @@ body{
 /*  */
 #gameOver{
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100%; height: 100vh;
     background: rgba(0, 0, 0, 0.9);
     color: white;
     font-size: 50px;
@@ -62,6 +61,7 @@ body{
     top: 0;
     left: -1850px;
     transition-duration: .5s;
+    transition-timing-function: ease;
 }
 
 #restart{
@@ -78,4 +78,14 @@ body{
     display: grid;
     grid-template: 1fr / 1fr 1fr 1fr 1fr 1fr;
     gap: 20px;
+}
+
+#movements{
+    margin-left: 20px;
+    background-color: antiquewhite;
+    width: 300px; padding: 10px;
+    border-radius: 20px;
+}
+#movements div{
+    display: inline-block;
 }

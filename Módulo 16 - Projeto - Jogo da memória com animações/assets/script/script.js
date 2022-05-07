@@ -7,6 +7,7 @@ startGame()
 
 function startGame() {
     initializeCards(game.createCardsFromTechs())
+    moveLayerGameOver()
 }
 
 function initializeCards() {
@@ -66,6 +67,7 @@ function flipCard() {
 
                     firstCardView.classList.remove('flip')
                     secondCardView.classList.remove('flip')
+                    // game.adicionarMovements()
                     game.unflipCards()
                 }, 500)
             }
@@ -76,6 +78,9 @@ function flipCard() {
 function restart(){
     game.clearCards()
     initializeCards(game.createCardsFromTechs())   
+    moveLayerGameOver()
+}
+function moveLayerGameOver(){
     let gameOverLayer = document.getElementById('gameOver')
-    gameOverLayer.style.display = 'none'
+    gameOverLayer.style.left = "-1850px"
 }

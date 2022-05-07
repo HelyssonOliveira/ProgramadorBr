@@ -1,9 +1,8 @@
 let game = {
-
+    cards: null,
     locMode: false,
     firstCard: null,
     secondCard: null,
-
     techs: ['alarm',
         'book',
         'camera',
@@ -15,8 +14,6 @@ let game = {
         'lua',
         'whatsapp'],
 
-    cards: null,
-    //
     setCard: function (id) {
         let card = this.cards.filter(card => card.id === id)[0]
 
@@ -49,6 +46,15 @@ let game = {
         this.secondCard = null
         this.locMode = false
     },
+    // Adicionar Placar
+    // adicionarMovements: function () {
+    //     let nMovemants = document.getElementById('nMovements')
+    //     if(this.secondCard.flipped){    
+    //         numberMoves =+ 1
+    //         nMovemants.innerHTML = `<div>${numberMoves}</div>`
+    //         numberMoves++
+    //     }
+    // },
     // Virar cartas
     unflipCards() {
         this.firstCard.flipped = false
@@ -56,7 +62,7 @@ let game = {
         this.clearCards()
     },
     // Check Game Over
-    checkGameOver: function(){
+    checkGameOver: function () {
         return this.cards.filter(card => !card.flipped).length == 0
     },
 
@@ -65,16 +71,16 @@ let game = {
     createCardsFromTechs: function () {
         this.cards = []
 
-        this.techs.forEach( (tech) => {
+        this.techs.forEach((tech) => {
             this.cards.push(this.createPairFromTechs(tech))
-        } )
+        })
         this.cards = this.cards.flatMap(pair => pair)
         this.shuffleCards()
         return this.cards
     },
     // criar par das cartas
     createPairFromTechs: function (tech) {
-        return [ {
+        return [{
             id: this.createIdWidthTech(tech),
             icon: tech,
             flipped: false
